@@ -1,19 +1,21 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
+import AppLayout from "../layout";
 import Home from "@/pages/Home";
 import LoginOrRegister from "@/pages/LoginOrRegister";
 
-const App = (prop) => {
+const App = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="user/:userId" element={<div>user</div>} />
+        <Route path="/" element={<AppLayout />} exact>
+          <Route index element={<Home />} />
           <Route
             path="*"
             element={
               <main style={{ padding: "1rem" }}>
-                <p>There's nothing here!</p>
+                <p>There&apos;s nothing here!</p>
               </main>
             }
           />

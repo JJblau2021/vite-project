@@ -1,10 +1,11 @@
+import React from "react";
 import { Outlet, Link, useParams } from "react-router-dom";
 import { Button } from "@douyinfe/semi-ui";
 // import { go } from "history";
 
-const Home = (props) => {
+const Home = () => {
   const params = useParams();
-  const handleClick = (e) => {
+  const handleClick = () => {
     location.hash = "/login";
   };
   return (
