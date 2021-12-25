@@ -1,9 +1,10 @@
-import React from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import AppLayout from "../layout";
-import Home from "@/pages/Home";
-import LoginOrRegister from "@/pages/LoginOrRegister";
+import AppLayout from '../layout';
+import Home from '@/pages/Home';
+import LoginOrRegister from '@/pages/LoginOrRegister';
+import Calendar from '@/pages/Calendar';
 
 const App = () => {
   return (
@@ -11,10 +12,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AppLayout />} exact>
           <Route index element={<Home />} />
+          <Route path="calendar" element={<Calendar />} />
+
           <Route
             path="*"
             element={
-              <main style={{ padding: "1rem" }}>
+              <main style={{ padding: '1rem' }}>
                 <p>There&apos;s nothing here!</p>
               </main>
             }
