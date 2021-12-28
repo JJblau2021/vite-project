@@ -1,0 +1,48 @@
+// distance
+@header-height: 104px;
+@footer-height: 50px;
+#distances() {
+  sm: 10px;
+  md: 20px;
+}
+
+// border
+#border-radius() {
+  normal: 6px;
+}
+
+// color variable
+@color-bgc: rgb(238, 245, 252);
+#border-colors() {
+  normal: rgb(232, 216, 243);
+  split: rgba(204, 204, 204, 0.3);
+}
+#text-colors() {
+  primary: #222;
+  secondary: #444;
+  tertiary: #666;
+  quaternary: #888;
+}
+
+// box-shadow
+#shadow-colors() {
+  normal: rgba(219, 155, 221, 0.1);
+  deep: rgba(155, 186, 221, 0.4);
+}
+#shadows() {
+  normal: 2px 2px 2px #shadow-colors[normal];
+  deep: 2px 2px 2px #shadow-colors[deep];
+  bordered: 0px 0px 1px #border-colors[normal];
+}
+
+// screen width
+@screen-xs-min: ~'(min-width: 480px)';
+@screen-xs-max: ~'(max-width: 480px)';
+@screen-sm-min: ~'(min-width: 576px)';
+@screen-sm-max: ~'(max-width: 576px)';
+@screen-md-min: ~'(min-width: 768px)';
+@screen-md-max: ~'(max-width: 768px)';
+@screen-lg-min: ~'(min-width: 992px)';
+@screen-lg-max: ~'(max-width: 992px)';
+@screen-xl-min: ~'(min-width: 1200px)';
+@screen-xl-max: ~'(max-width: 1200px)';

@@ -1,0 +1,17 @@
+@import url('@/assets/variableDef.less');
+
+.mail_form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .mail_header,
+  .mail_body {
+    margin-bottom: #distances[md];
+    background-color: rgba(188, 219, 248, 0.5);
+    padding: 0 #distances[md];
+    border-radius: 6px;
+  }
+  .mail_body {
+    flex: 1;
+  }
+}

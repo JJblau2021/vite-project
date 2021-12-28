@@ -43,6 +43,7 @@ export const navList = [
         itemKey: 'mailBox',
         text: 'Mail Box',
         icon: <IconMailStroked1 />,
+        link: '#/mailbox',
       },
       {
         itemKey: 'maps',

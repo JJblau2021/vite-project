@@ -1,0 +1,21 @@
+@import url('@/assets/index.less');
+.mailbox_wrapper {
+  display: flex;
+  .mailbox_nav {
+    border-right: 1px solid #border-colors[split];
+  }
+  .mailbox_form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: #distances[sm];
+  }
+  @media @screen-md-min {
+    .mailbox_form {
+      margin-left: #distances[md];
+    }
+  }
+  .mailbox_form_empty {
+    justify-content: center;
+  }
+}
