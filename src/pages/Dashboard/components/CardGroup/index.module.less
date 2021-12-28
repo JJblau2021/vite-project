@@ -1,0 +1,24 @@
+@import url('@/assets/index.less');
+.cardGroup_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  width: 100%;
+  margin-bottom: #distances[sm];
+}
+
+@media @screen-md-min {
+  .card {
+    width: 48%;
+    margin-bottom: #distances[md];
+  }
+}
+
+@media @screen-xl-min {
+  .card {
+    width: 24%;
+  }
+}

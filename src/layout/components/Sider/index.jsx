@@ -3,11 +3,11 @@ import { Layout } from '@douyinfe/semi-ui';
 import SiderNav from './components/SiderNav';
 import './index.less';
 
-const Sider = ({ ...props }) => {
+const Sider = ({ navList, ...props }) => {
   return (
     <Layout.Sider {...props}>
       {/* <div className="sider_header">SiderHeader</div> */}
-      <SiderNav />
+      <SiderNav navList={navList} />
     </Layout.Sider>
   );
 };

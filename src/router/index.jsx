@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import AppLayout from '../layout';
-import Home from '@/pages/Home';
+import Dashboard from '@/pages/Dashboard';
 import LoginOrRegister from '@/pages/LoginOrRegister';
 import Calendar from '@/pages/Calendar';
 
@@ -11,7 +11,7 @@ const App = () => {
     <HashRouter>
       <Routes>
         <Route path="/" element={<AppLayout />} exact>
-          <Route index element={<Home />} />
+          <Route index element={<Dashboard />} />
           <Route path="calendar" element={<Calendar />} />
 
           <Route
