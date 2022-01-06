@@ -40,8 +40,9 @@ const option = {
   ],
 };
 const DEFAULT_WIDTH = '100%',
-  DEFAULT_HEIGHT = 300;
-const CommonChart = ({ width, height, resizetrigger }) => {
+  DEFAULT_HEIGHT = 300,
+  REFRASH_RAT = 10;
+const CommonChart = ({ width, height, resizeTrigger, triggerTime = 300 }) => {
   const chartRef = useRef();
   const divRef = useRef();
   useEffect(() => {
@@ -52,15 +53,23 @@ const CommonChart = ({ width, height, resizetrigger }) => {
       disposeChart();
     };
   }, []);
+  let resizeChartInterVal;
   useEffect(() => {
-    resizeChart();
-  }, [resizetrigger]);
+    createChartResizeInterval();
+  }, [resizeTrigger]);
   const initChart = () => {
     chartRef.current = echarts.init(divRef.current);
     chartRef.current.setOption(option);
   };
   const resizeChart = () => chartRef.current && chartRef.current.resize();
   const disposeChart = () => chartRef.current && chartRef.current.dispose();
+  const createChartResizeInterval = () => {
+    if (resizeChartInterVal) {
+      clearInterval(resizeChartInterVal);
+    }
+    resizeChartInterVal = setInterval(resizeChart, REFRASH_RAT);
+    setTimeout(clearInterval, triggerTime, resizeChartInterVal);
+  };
 
   return (
     <div
