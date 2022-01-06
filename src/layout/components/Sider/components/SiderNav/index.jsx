@@ -8,6 +8,7 @@ import {
   closeSiderBarCollapse,
   openSiderBarCollapse,
 } from '@/actions';
+const MIN_WIDTH = 576;
 
 const SiderNav = ({ navList, dispatch, isCollapsed, useCollapse }) => {
   useEffect(() => {
@@ -15,14 +16,19 @@ const SiderNav = ({ navList, dispatch, isCollapsed, useCollapse }) => {
       checkCollapseUsable();
       window.addEventListener('resize', checkCollapseUsable);
     }
-    return () => window.removeEventListener('resize', checkCollapseUsable);
+    return () => {
+      if (window) {
+        window.removeEventListener('resize', checkCollapseUsable);
+      }
+    };
   }, []);
   const checkCollapseUsable = () =>
     dispatch(
-      window.innerWidth <= 480
+      window.innerWidth <= MIN_WIDTH
         ? closeSiderBarCollapse()
         : openSiderBarCollapse(),
     );
+
   const onNavSelect = (prams) => {
     console.log(prams);
   };
