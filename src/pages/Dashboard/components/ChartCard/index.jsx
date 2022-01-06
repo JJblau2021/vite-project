@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from '@douyinfe/semi-ui';
 import CommonChart from '@/components/CommonChart';
-import styles from './index.module.less';
+// import styles from './index.module.less';
 
 const ChartCard = ({ resizeTrigger }) => {
   return (
