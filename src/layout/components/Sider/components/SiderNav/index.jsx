@@ -34,12 +34,10 @@ const SiderNav = ({
         ? closeSiderBarCollapse()
         : openSiderBarCollapse(),
     );
-
   const onNavSelect = (prams) => {
     console.log(prams);
   };
   const toggleCollapse = () => dispatch(collapseSiderBar());
-
   return (
     <Nav
       className={styles.header_nav}

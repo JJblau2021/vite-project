@@ -35,6 +35,14 @@
   bordered: 0px 0px 1px #border-colors[normal];
 }
 
+.box_shadow {
+  box-shadow: #shadows[normal] !important;
+  transition: box-shadow 0.2s ease-in !important;
+  &:hover {
+    box-shadow: #shadows[deep] !important;
+  }
+}
+
 // screen width
 @screen-xs-min: ~'(min-width: 480px)';
 @screen-xs-max: ~'(max-width: 480px)';

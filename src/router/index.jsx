@@ -6,6 +6,7 @@ import Dashboard from '@/pages/Dashboard';
 import LoginOrRegister from '@/pages/LoginOrRegister';
 import Calendar from '@/pages/Calendar';
 import Mail from '@/pages/Mail';
+import UserProfile from '../pages/UserProfile';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AppLayout />} exact>
           <Route index element={<Dashboard />} />
+          <Route path="userProfile" element={<UserProfile />} />
           <Route path="calendar" element={<Calendar />} />
           <Route path="mailbox" element={<Mail />} />
           <Route
