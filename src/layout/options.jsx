@@ -53,3 +53,4 @@ export const navList = [
     ],
   },
 ];
+export const defaultActiveNavs = ['dashboard'];

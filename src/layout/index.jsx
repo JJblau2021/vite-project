@@ -6,12 +6,16 @@ import Content from './components/Content';
 // import Footer from './components/Footer';
 import './index.less';
 
-import { navList } from './options';
+import { navList, defaultActiveNavs } from './options';
 
 const AppLayout = () => {
   return (
     <Layout className="app_wrapper">
-      <Sider className="app_siderbar" navList={navList} />
+      <Sider
+        className="app_siderbar"
+        navList={navList}
+        defaultActiveNavs={defaultActiveNavs}
+      />
       <Layout className="app_container">
         <Header className="app_header" />
         <Content className="app_content" />

@@ -10,7 +10,13 @@ import {
 } from '@/actions';
 const MIN_WIDTH = 576;
 
-const SiderNav = ({ navList, dispatch, isCollapsed, useCollapse }) => {
+const SiderNav = ({
+  navList,
+  dispatch,
+  isCollapsed,
+  useCollapse,
+  defaultActiveNavs,
+}) => {
   useEffect(() => {
     if (window) {
       checkCollapseUsable();
@@ -38,6 +44,7 @@ const SiderNav = ({ navList, dispatch, isCollapsed, useCollapse }) => {
     <Nav
       className={styles.header_nav}
       items={navList}
+      defaultSelectedKeys={defaultActiveNavs}
       onSelect={onNavSelect}
       isCollapsed={isCollapsed}
       onCollapseChange={toggleCollapse}
