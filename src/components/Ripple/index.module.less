@@ -1,0 +1,33 @@
+@import url('@/assets/variableDef.less');
+.btn {
+  position: relative;
+  display: inline-block;
+  .water_wrapper {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.5;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+
+.water_container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  .water {
+    background-color: skyblue;
+    border-radius: 50%;
+    transition: opacity 0.4s ease-out, transform 10s ease-out;
+    opacity: 0;
+    &.water_active {
+      transform: scale(100);
+      opacity: 0.5;
+    }
+    &.water_hiden {
+      opacity: 0;
+    }
+  }
+}
